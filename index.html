@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubh Solanki - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header-content h1 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .header-content p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .bio {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .bio-item {
+            margin: 8px 0;
+            font-size: 1em;
+        }
+
+        .bio-item strong {
+            color: #667eea;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .skill-category p {
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        .project-card h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .project-card p {
+            margin: 10px 0;
+            font-size: 0.95em;
+        }
+
+        .project-tools {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+
+        .connect {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            font-weight: bold;
+        }
+
+        .social-btn:hover {
+            background: #764ba2;
+        }
+
+        footer {
+            background: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-top: 30px;
+        }
+
+        footer p {
+            color: #666;
+        }
+
+        .emoji {
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2em;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .connect {
+                flex-direction: column;
+            }
+
+            .social-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-content">
+                <h1>Hi, I'm Shubh Solanki 👋</h1>
+                <p>🎓 B.Tech Student | 💻 Tech Enthusiast | 📊 MATLAB & Engineering Projects</p>
+                
+                <div class="bio">
+                    <div class="bio-item">🔭 <strong>Currently working on:</strong> MATLAB & Engineering projects</div>
+                    <div class="bio-item">🌱 <strong>Learning:</strong> Data Analysis, Machine Learning</div>
+                    <div class="bio-item">💡 <strong>Interested in:</strong> Real-time systems, Electronics, Coding</div>
+                    <div class="bio-item">📫 <strong>Reach me:</strong> your-email@gmail.com</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Skills Section -->
+        <section>
+            <h2>🛠️ Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <p>✓ MATLAB</p>
+                    <p>✓ C</p>
+                    <p>✓ Python</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <p>✓ Git</p>
+                    <p>✓ Simulink</p>
+                    <p>✓ Excel</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Core Concepts</h3>
+                    <p>✓ Signal Processing</p>
+                    <p>✓ Data Analysis</p>
+                    <p>✓ Engineering Problem Solving</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section>
+            <h2>📂 Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>🔹 SURF Feature Detection</h3>
+                    <p>Detects features from images using SURF (Speeded Up Robust Features) algorithm for computer vision applications.</p>
+                    <div class="project-tools">
+                        <strong>Tools:</strong> MATLAB, Image Processing Toolbox
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>🔹 Corrosion Analysis</h3>
+                    <p>Comprehensive study of dry and wet corrosion mechanisms with detailed analysis and presentation of results.</p>
+                    <div class="project-tools">
+                        <strong>Tools:</strong> MATLAB, PowerPoint, Excel
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>🔹 SVD Implementation</h3>
+                    <p>Solved complex matrix decomposition problems using Singular Value Decomposition (SVD) techniques in MATLAB.</p>
+                    <div class="project-tools">
+                        <strong>Tools:</strong> MATLAB, Linear Algebra
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Connect Section -->
+        <section>
+            <h2>🌐 Connect With Me</h2>
+            <div class="connect">
+                <a href="https://github.com/solankishubh24-pixel" class="social-btn">GitHub Profile</a>
+                <a href="https://linkedin.com/in/solankishubh24" class="social-btn">LinkedIn</a>
+                <a href="mailto:your-email@gmail.com" class="social-btn">Email</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Shubh Solanki. All rights reserved. | Built with HTML & CSS</p>
+        </footer>
+    </div>
+</body>
+</html>
